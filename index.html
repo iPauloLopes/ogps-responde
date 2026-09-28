@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responde OGPS</title>
+    <link rel="stylesheet" href="css/mainStyle.css">
     <script src="scripts/mainScript.js" defer></script>
 </head>
 <body>
-    
+
+    <p id="text">O recurso XXXXX está na XXXXX</p>
+
+    <form id="form" autocomplete="off" method="post">
+        <input type="text" name="nup" placeholder="NUP da manifestação">
+
+        <select name="area">
+            <option value="Divisão Regional da Perícia Médica Federal 1" selected>DR 1</option>
+            <option value="Divisão Regional da Perícia Médica Federal 2">DR 2</option>
+            <option value="Divisão Regional da Perícia Médica Federal 3">DR 3</option>
+            <option value="Divisão Regional da Perícia Médica Federal 10">DR 10</option>
+            <option value="Divisão Regional da Perícia Médica Federal 27">DR 27</option>
+        </select>
+
+        <button id="submitBtn" type="submit">Enviar</button>
+    </form>
+
 </body>
 </html>
