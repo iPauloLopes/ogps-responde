@@ -14,6 +14,17 @@ function inputToObject (event) {
     return formData
 }
 
+//Replace elements with # in the base text
+function replaceTags (text, convertedObject) {
+    const replacedTags = text.replace(/#(\w+)/g, (match, key) => convertedObject[key] || match)
+    return replacedTags
+}
+
+//Copy the edited text to clipboard
+function copyToClipboard (editedText) {
+    navigator.clipboard.writeText(editedText)
+}
+
 //Reset all form fields
 function resetFormFields (event) {
     event.target.reset()
@@ -23,8 +34,7 @@ function resetFormFields (event) {
 function callFunctions (event) {
     cancelPageReload(event)
     const convertedObject = inputToObject(event)
-
-    console.log(convertedObject)//Only here for debugging purposes and should be removed
-
+    const editedText = replaceTags(text, convertedObject)
+    copyToClipboard (editedText)
     resetFormFields (event)
 }
