@@ -1,4 +1,4 @@
-const text = document.querySelector('#text').textContent
+const text = document.querySelector('#text')
 const form = document.querySelector('#form')
 
 form.addEventListener ('submit', callFunctions)
@@ -16,13 +16,18 @@ function inputToObject (event) {
 
 //Replace elements with # in the base text
 function replaceTags (text, convertedObject) {
-    const replacedTags = text.replace(/#(\w+)/g, (match, key) => convertedObject[key] || match)
+    const replacedTags = text.textContent.replace(/#(\w+)/g, (match, key) => convertedObject[key] || match)
     return replacedTags
 }
 
 //Copy the edited text to clipboard
 function copyToClipboard (editedText) {
     navigator.clipboard.writeText(editedText)
+}
+
+//Update page text
+function updateText (editedText) {
+    text.textContent = editedText
 }
 
 //Reset all form fields
@@ -36,5 +41,6 @@ function callFunctions (event) {
     const convertedObject = inputToObject(event)
     const editedText = replaceTags(text, convertedObject)
     copyToClipboard (editedText)
+    updateText (editedText)
     resetFormFields (event)
 }
