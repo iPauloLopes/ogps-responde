@@ -8,3 +8,10 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+.notificationBanner {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}

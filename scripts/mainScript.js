@@ -1,4 +1,5 @@
 const text = document.querySelector('#text')
+const newText = document.querySelector('#newText')
 const form = document.querySelector('#form')
 
 form.addEventListener ('submit', callFunctions)
@@ -25,9 +26,17 @@ function copyToClipboard (editedText) {
     navigator.clipboard.writeText(editedText)
 }
 
+// Show and hide the notification
+function showNotification () {
+    document.querySelector('.notificationBanner').style.display = 'flex'
+    setTimeout(() => document.querySelector('.notificationBanner').style.display = 'none', 2000)
+}
+
 //Update page text
 function updateText (editedText) {
-    text.textContent = editedText
+    text.style.display = 'none'
+    newText.textContent = editedText
+    newText.style.display = 'flex'
 }
 
 //Reset all form fields
@@ -41,6 +50,7 @@ function callFunctions (event) {
     const convertedObject = inputToObject(event)
     const editedText = replaceTags(text, convertedObject)
     copyToClipboard (editedText)
+    showNotification ()
     updateText (editedText)
     resetFormFields (event)
 }
