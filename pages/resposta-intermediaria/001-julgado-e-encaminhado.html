@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responde OGPS</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../scripts/copy-text.js" defer></script>
+    <script src="../../scripts/import-sidebar.js" defer></script>
+    <script src="../../scripts/import-crps-list.js" defer></script>
+</head>
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <form id="form" autocomplete="off" method="post">
+             
+        <input type="text" name="recurso" placeholder="Nº do recurso">
+
+        <div id="crps-list-container"></div>
+
+        <input type="text" name="data" placeholder="Data da sessão de julgamento">
+
+        <button id="submitBtn" type="submit">Enviar</button>
+
+        <div class="notificationBanner">
+            <img src="images/like.png" alt="">
+        </div>
+    </form>
+
+    <p id="text" style="white-space: pre-line;">Prezado(a) senhor(a),
+
+Informamos que, após encaminharmos sua manifestação para o Conselho de Recursos da Previdência Social (CRPS), recebemos a informação de que o recurso nº <mark>#recurso</mark>, localizado na <mark>#area</mark>, foi julgado no dia <mark>#data</mark> e encaminhado ao Instituto Nacional do Seguro Social (INSS) para as providências cabíveis decorrentes da decisão.
+
+A fase seguinte é o cumprimento da decisão proferida ou a interposição do recurso, apresentando as contrarrazões, no prazo de 30 (trinta) dias, contado a partir da ciência da decisão.
+
+Você pode acompanhar o andamento do seu processo pelo site ou aplicativo “Meu INSS” ou diretamente pela página oficial do CRPS: https://consultaprocessos.inss.gov.br/
+
+Agradecemos o seu contato e nos colocamos à disposição para os esclarecimentos necessários.
+
+Atenciosamente,
+
+Ouvidoria-Geral
+
+Ministério da Previdência Social
+
+
+Siga-nos nas redes sociais:
+Facebook https://www.facebook.com/minprevidencia/
+Instagram https://www.instagram.com/minprevidencia/
+Youtube https://www.youtube.com/@minprevidencia/</p>
+
+    <p id="newText" style="white-space: pre-line;"></p>
+
+</body>
+</html>
