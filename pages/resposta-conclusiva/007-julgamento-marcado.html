@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responde OGPS</title>
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <script src="../../scripts/copy-text.js" defer></script>
+    <script src="../../scripts/import-sidebar.js" defer></script>
+</head>
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <p id="text">
+Prezado(a) senhor(a),
+
+Informamos que, após encaminharmos sua manifestação para o Conselho de Recursos da Previdência Social (CRPS), recebemos a informação de que o processo do Recurso #tipoRecurso nº #numeroRecurso, localizado na XXXXXXXXXXXX, foi incluído em pauta para julgamento. A sessão de julgamento nº XXXX está marcada para o dia XXXX às XXXX.
+
+A fase seguinte ao trâmite processual é o encaminhamento do recurso ao Instituto Nacional do Seguro Social (INSS) para cumprimento de decisão.
+
+Por oportuno, esclarecemos que o Conselho de Recursos da Previdência Social tem recebido grande volume de processos, ocasionando atraso nos julgamentos. Diante disso, diversas ações estão sendo promovidas para diminuir o tempo de espera, como aperfeiçoamento de sistemas e capacitação de pessoal.
+
+Você pode acompanhar o andamento do seu processo pelo site ou aplicativo “Meu INSS” ou diretamente pela página oficial do CRPS: https://consultaprocessos.inss.gov.br/
+
+Agradecemos o seu contato e nos colocamos à disposição para os esclarecimentos necessários.
+
+Atenciosamente,
+
+Ouvidoria-Geral
+
+Ministério da Previdência Social
+
+
+Siga-nos nas redes sociais:
+Facebook https://www.facebook.com/minprevidencia/
+Instagram https://www.instagram.com/minprevidencia/
+Youtube https://www.youtube.com/@minprevidencia/
+    </p>
+
+    <p id="newText"></p>
+
+    <form id="form" autocomplete="off" method="post">
+        
+        <select name="tipoRecurso">
+            <option value="Ordinário" selected>Ordinário</option>
+            <option value="Especial">Especial</option>
+        </select>
+        
+        <input type="text" name="numeroRecurso" placeholder="Nº do recurso">
+
+        <button id="submitBtn" type="submit">Enviar</button>
+
+        <div class="notificationBanner">
+            <img src="images/like.png" alt="">
+        </div>
+    </form>
+</body>
+</html>
