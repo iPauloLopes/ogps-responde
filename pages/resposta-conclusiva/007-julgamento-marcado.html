@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../scripts/copy-text.js" defer></script>
     <script src="../../scripts/import-sidebar.js" defer></script>
+    <script src="../../scripts/import-crps-list.js" defer></script>
 </head>
 <body>
 
     <div id="sidebar-container"></div>
 
-    <p id="text">
+    <p id="text" style="white-space: pre-line;">
 Prezado(a) senhor(a),
 
-Informamos que, após encaminharmos sua manifestação para o Conselho de Recursos da Previdência Social (CRPS), recebemos a informação de que o processo do Recurso #tipoRecurso nº #numeroRecurso, localizado na XXXXXXXXXXXX, foi incluído em pauta para julgamento. A sessão de julgamento nº XXXX está marcada para o dia XXXX às XXXX.
+Informamos que, após encaminharmos sua manifestação para o Conselho de Recursos da Previdência Social (CRPS), recebemos a informação de que o processo do Recurso nº <mark>#recurso</mark>, localizado na <mark>#area</mark>, foi incluído em pauta para julgamento. A sessão de julgamento nº <mark>#sessao</mark> está marcada para o dia <mark>#data</mark> às <mark>#hora</mark>.
 
 A fase seguinte ao trâmite processual é o encaminhamento do recurso ao Instituto Nacional do Seguro Social (INSS) para cumprimento de decisão.
 
@@ -41,13 +42,16 @@ Youtube https://www.youtube.com/@minprevidencia/
     <p id="newText"></p>
 
     <form id="form" autocomplete="off" method="post">
-        
-        <select name="tipoRecurso">
-            <option value="Ordinário" selected>Ordinário</option>
-            <option value="Especial">Especial</option>
-        </select>
-        
-        <input type="text" name="numeroRecurso" placeholder="Nº do recurso">
+             
+        <input type="text" name="recurso" placeholder="Nº do recurso">
+
+        <div id="crps-list-container"></div>
+
+        <input type="text" name="sessao" placeholder="Nº da sessão de julgamento">
+
+        <input type="text" name="data" placeholder="Data da sessão de julgamento">
+
+        <input type="text" name="hora" placeholder="Hora da sessão de julgamento">
 
         <button id="submitBtn" type="submit">Enviar</button>
 
