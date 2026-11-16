@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T 001</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../scripts/copy-text.js" defer></script>
+    <script src="../../scripts/import-sidebar.js" defer></script>
+</head>
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <form id="form" autocomplete="off" method="post">
+             
+        <input type="text" name="nome" placeholder="Nome do requerente">
+
+        <input type="text" name="cpf" placeholder="CPF do requerente">
+
+        <button id="submitBtn" type="submit">Enviar</button>
+
+        <div class="notificationBanner">
+            <img src="images/like.png" alt="">
+        </div>
+    </form>
+
+    <p id="text" style="white-space: pre-line;">Prezados,
+
+Encaminhamos a presente manifestação, para análise e, se necessário, tomadas as providências cabíveis.
+
+Solicitamos que, após a avaliação da área, ela seja devolvida à Ouvidoria do Ministério da Previdência Social pelo sistema Fala.BR, na caixa “Ouvid” (campo Tratamento), até 05 (cinco) dias antes do prazo final. É importante incluir todos os detalhes e informações relevantes, conforme solicitado pelo(a) cidadão(ã), de forma clara, direta, simples e acessível, conforme disposto na Portaria MPS nº1.725, de 28.08.2025.
+
+Por fim, caso essa demanda não seja de responsabilidade desta Unidade, solicitamos que ela seja devolvida, se possível, indicando a Unidade pertinente.
+
+Quaisquer dúvidas, estamos à disposição.
+
+Atenciosamente,
+
+Ouvidoria
+
+Ministério da Previdência Social
+
+Dados do requerente:
+Nome: <mark>#nome</mark>
+CPF: <mark>#cpf</mark></p>
+
+    <p id="newText" style="white-space: pre-line;"></p>
+
+</body>
+</html>
