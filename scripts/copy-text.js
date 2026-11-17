@@ -28,8 +28,8 @@ function copyToClipboard (editedText) {
 
 // Show and hide the notification
 function showNotification () {
-    document.querySelector('.notificationBanner').style.display = 'flex'
-    setTimeout(() => document.querySelector('.notificationBanner').style.display = 'none', 2000)
+    document.querySelector('.notification-toast').style.display = 'flex'
+    setTimeout(() => document.querySelector('.notification-toast').style.display = 'none', 2000)
 }
 
 //Update page text
