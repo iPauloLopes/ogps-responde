@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,40 @@
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../scripts/copy-text.js" defer></script>
     <script src="../../scripts/import-sidebar.js" defer></script>
+    <script src="../../scripts/import-crps-list.js" defer></script>
 </head>
 <body>
 
     <div id="sidebar-container"></div>
 
-    <form id="form" autocomplete="off" method="post">
-             
-        <input type="text" name="nome" placeholder="Nome do requerente">
+    <main class="content-container">
+        
+        <div class="main-card">
+        
+        <div class="main-header">
+            <h1>T 001 - Tramitação</h1>
 
-        <input type="text" name="cpf" placeholder="CPF do requerente">
-
-        <button id="submitBtn" type="submit">Enviar</button>
-
-        <div class="notificationBanner">
-            <img src="images/like.png" alt="">
+            <p></p>
         </div>
-    </form>
+            
+            <form id="form" autocomplete="off" method="post">
+                <input type="text" name="nome" placeholder="Nome do requerente">
 
-    <p id="text" style="white-space: pre-line;">Prezados,
+                <input type="text" name="cpf" placeholder="CPF do requerente">
+
+                <div class="notification-toast">
+                    <h3>Texto copiado!</h3>
+                </div>
+            </form>
+
+            <div class="text-header">
+                <h2>Texto:</h2>
+
+                <button id="submit-btn" type="submit" form="form">Copiar Texto</button>
+            </div>
+
+            <div class="text-box">
+                <p id="text" style="white-space: pre-line;">Prezados,
 
 Encaminhamos a presente manifestação, para análise e, se necessário, tomadas as providências cabíveis.
 
@@ -45,7 +60,10 @@ Dados do requerente:
 Nome: <mark>#nome</mark>
 CPF: <mark>#cpf</mark></p>
 
-    <p id="newText" style="white-space: pre-line;"></p>
+                <p id="newText" style="white-space: pre-line;"></p>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +13,40 @@
 
     <div id="sidebar-container"></div>
 
-    <form id="form" autocomplete="off" method="post">
-             
-        <input type="text" name="recurso" placeholder="Nº do recurso">
+    <main class="content-container">
+        
+        <div class="main-card">
+        
+        <div class="main-header">
+            <h1>RC 007 - Julgamento marcado</h1>
 
-        <div id="crps-list-container"></div>
-
-        <input type="text" name="sessao" placeholder="Nº da sessão de julgamento">
-
-        <input type="text" name="data" placeholder="Data da sessão de julgamento">
-
-        <input type="text" name="hora" placeholder="Hora da sessão de julgamento">
-
-        <button id="submitBtn" type="submit">Enviar</button>
-
-        <div class="notificationBanner">
-            <img src="images/like.png" alt="">
+            <p>Obs.: Marcar "não" na resolutividade.</p>
         </div>
-    </form>
+            
+            <form id="form" autocomplete="off" method="post">
+                <input type="text" name="recurso" placeholder="Nº do recurso">
 
-    <p id="text" style="white-space: pre-line;">Prezado(a) senhor(a),
+                <div id="crps-list-container"></div>
+
+                <input type="text" name="sessao" placeholder="Nº da sessão">
+
+                <input type="text" name="data" placeholder="Data da sessão">
+
+                <input type="text" name="hora" placeholder="Hora da sessão">
+
+                <div class="notification-toast">
+                    <h3>Texto copiado!</h3>
+                </div>
+            </form>
+
+            <div class="text-header">
+                <h2>Texto:</h2>
+
+                <button id="submit-btn" type="submit" form="form">Copiar Texto</button>
+            </div>
+
+            <div class="text-box">
+                <p id="text" style="white-space: pre-line;">Prezado(a) senhor(a),
 
 Informamos que, após encaminharmos sua manifestação para o Conselho de Recursos da Previdência Social (CRPS), recebemos a informação de que o processo do Recurso nº <mark>#recurso</mark>, localizado na <mark>#area</mark>, foi incluído em pauta para julgamento. A sessão de julgamento nº <mark>#sessao</mark> está marcada para o dia <mark>#data</mark> às <mark>#hora</mark>.
 
@@ -56,7 +70,10 @@ Facebook https://www.facebook.com/minprevidencia/
 Instagram https://www.instagram.com/minprevidencia/
 Youtube https://www.youtube.com/@minprevidencia/</p>
 
-    <p id="newText" style="white-space: pre-line;"></p>
+                <p id="newText" style="white-space: pre-line;"></p>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
