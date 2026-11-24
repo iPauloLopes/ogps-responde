@@ -1,52 +1,25 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responde OGPS - RC 007</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script src="../../scripts/copy-text.js" defer></script>
-    <script src="../../scripts/import-sidebar.js" defer></script>
-    <script src="../../scripts/import-crps-list.js" defer></script>
-</head>
-<body>
-
-    <div id="sidebar-container"></div>
-
-    <main class="content-container">
-        
-        <div class="main-card">
-        
+<main class="content-container">
+    <div class="main-card">
         <div class="main-header">
             <h1>RC 007 - Julgamento marcado</h1>
-
             <p>Obs.: Marcar "não" na resolutividade.</p>
         </div>
-            
-            <form id="form" autocomplete="off" method="post">
-                <input type="text" name="recurso" placeholder="Nº do recurso">
-
-                <div id="crps-list-container"></div>
-
-                <input type="text" name="sessao" placeholder="Nº da sessão">
-
-                <input type="text" name="data" placeholder="Data da sessão">
-
-                <input type="text" name="hora" placeholder="Hora da sessão">
-
-                <div class="notification-toast">
-                    <h3>Texto copiado!</h3>
-                </div>
-            </form>
-
-            <div class="text-header">
-                <h2>Texto:</h2>
-
-                <button id="submit-btn" type="submit" form="form">Copiar Texto</button>
+        <form id="form" autocomplete="off" method="post">
+            <input type="text" name="recurso" placeholder="Nº do recurso">
+            <div id="crps-list-container"></div>
+            <input type="text" name="sessao" placeholder="Nº da sessão">
+            <input type="text" name="data" placeholder="Data da sessão">
+            <input type="text" name="hora" placeholder="Hora da sessão">
+            <div class="notification-toast">
+                <h3>Texto copiado!</h3>
             </div>
-
-            <div class="text-box">
-                <p id="text" style="white-space: pre-line;">Prezado(a) senhor(a),
+        </form>
+        <div class="text-header">
+            <h2>Texto:</h2>
+            <button id="submit-btn" type="submit" form="form">Copiar Texto</button>
+        </div>
+        <div class="text-box">
+            <p id="text" style="white-space: pre-line;">Prezado(a) senhor(a),
 
 Informamos que, após encaminharmos sua manifestação para o Conselho de Recursos da Previdência Social (CRPS), recebemos a informação de que o processo do Recurso nº <mark>#recurso</mark>, localizado na <mark>#area</mark>, foi incluído em pauta para julgamento. A sessão de julgamento nº <mark>#sessao</mark> está marcada para o dia <mark>#data</mark> às <mark>#hora</mark>.
 
@@ -54,7 +27,7 @@ A fase seguinte ao trâmite processual é o encaminhamento do recurso ao Institu
 
 Por oportuno, esclarecemos que o Conselho de Recursos da Previdência Social tem recebido grande volume de processos, ocasionando atraso nos julgamentos. Diante disso, diversas ações estão sendo promovidas para diminuir o tempo de espera, como aperfeiçoamento de sistemas e capacitação de pessoal.
 
-Você pode acompanhar o andamento do seu processo pelo site ou aplicativo “Meu INSS” ou diretamente pela página oficial do CRPS: https://consultaprocessos.inss.gov.br/
+Você pode acompanhar o andamento do seu processo pelo site ou aplicativo "Meu INSS" ou diretamente pela página oficial do CRPS: https://consultaprocessos.inss.gov.br/
 
 Agradecemos o seu contato e nos colocamos à disposição para os esclarecimentos necessários.
 
@@ -69,11 +42,7 @@ Siga-nos nas redes sociais:
 Facebook https://www.facebook.com/minprevidencia/
 Instagram https://www.instagram.com/minprevidencia/
 Youtube https://www.youtube.com/@minprevidencia/</p>
-
-                <p id="newText" style="white-space: pre-line;"></p>
-            </div>
+            <p id="newText" style="white-space: pre-line;"></p>
         </div>
-    </main>
-
-</body>
-</html>
+    </div>
+</main>

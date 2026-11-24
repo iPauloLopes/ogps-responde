@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responde OGPS - T 001</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script src="../../scripts/copy-text.js" defer></script>
-    <script src="../../scripts/import-sidebar.js" defer></script>
-    <script src="../../scripts/import-crps-list.js" defer></script>
-</head>
-<body>
-
-    <div id="sidebar-container"></div>
-
-    <main class="content-container">
-        
-        <div class="main-card">
-        
+<main class="content-container">
+    <div class="main-card">
         <div class="main-header">
             <h1>T 001 - Tramitação</h1>
-
             <p></p>
         </div>
-            
-            <form id="form" autocomplete="off" method="post">
-                <input type="text" name="nome" placeholder="Nome do requerente">
-
-                <input type="text" name="cpf" placeholder="CPF do requerente">
-
-                <div class="notification-toast">
-                    <h3>Texto copiado!</h3>
-                </div>
-            </form>
-
-            <div class="text-header">
-                <h2>Texto:</h2>
-
-                <button id="submit-btn" type="submit" form="form">Copiar Texto</button>
+        <form id="form" autocomplete="off" method="post">
+            <input type="text" name="nome" placeholder="Nome do requerente">
+            <input type="text" name="cpf" placeholder="CPF do requerente">
+            <div class="notification-toast">
+                <h3>Texto copiado!</h3>
             </div>
-
-            <div class="text-box">
-                <p id="text" style="white-space: pre-line;">Prezados,
+        </form>
+        <div class="text-header">
+            <h2>Texto:</h2>
+            <button id="submit-btn" type="submit" form="form">Copiar Texto</button>
+        </div>
+        <div class="text-box">
+            <p id="text" style="white-space: pre-line;">Prezados,
 
 Encaminhamos a presente manifestação, para análise e, se necessário, tomadas as providências cabíveis.
 
-Solicitamos que, após a avaliação da área, ela seja devolvida à Ouvidoria do Ministério da Previdência Social pelo sistema Fala.BR, na caixa “Ouvid” (campo Tratamento), até 05 (cinco) dias antes do prazo final. É importante incluir todos os detalhes e informações relevantes, conforme solicitado pelo(a) cidadão(ã), de forma clara, direta, simples e acessível, conforme disposto na Portaria MPS nº1.725, de 28.08.2025.
+Solicitamos que, após a avaliação da área, ela seja devolvida à Ouvidoria do Ministério da Previdência Social pelo sistema Fala.BR, na caixa "Ouvid" (campo Tratamento), até 05 (cinco) dias antes do prazo final. É importante incluir todos os detalhes e informações relevantes, conforme solicitado pelo(a) cidadão(ã), de forma clara, direta, simples e acessível, conforme disposto na Portaria MPS nº1.725, de 28.08.2025.
 
 Por fim, caso essa demanda não seja de responsabilidade desta Unidade, solicitamos que ela seja devolvida, se possível, indicando a Unidade pertinente.
 
@@ -59,11 +35,7 @@ Ministério da Previdência Social
 Dados do requerente:
 Nome: <mark>#nome</mark>
 CPF: <mark>#cpf</mark></p>
-
-                <p id="newText" style="white-space: pre-line;"></p>
-            </div>
+            <p id="newText" style="white-space: pre-line;"></p>
         </div>
-    </main>
-
-</body>
-</html>
+    </div>
+</main>

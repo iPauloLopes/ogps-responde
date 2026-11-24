@@ -1,8 +1,8 @@
-const text = document.querySelector('#text')
-const newText = document.querySelector('#newText')
-const form = document.querySelector('#form')
-
-form.addEventListener ('submit', callFunctions)
+function initializeCopyFeature() {
+    document.querySelectorAll('#form').forEach(form => {
+        form.addEventListener('submit', callFunctions);
+    });
+}
 
 //Prevent page reload after submit
 function cancelPageReload (event) {
@@ -54,3 +54,8 @@ function callFunctions (event) {
     updateText (editedText)
     resetFormFields (event)
 }
+
+
+window.initCopyText = initializeCopyFeature;
+
+initializeCopyFeature();
