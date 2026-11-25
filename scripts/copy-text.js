@@ -1,61 +1,34 @@
-function initializeCopyFeature() {
+function onSubmit() {
     document.querySelectorAll('#form').forEach(form => {
-        form.addEventListener('submit', callFunctions);
+        form.addEventListener('submit', copyToClipboard);
     });
 }
 
-//Prevent page reload after submit
-function cancelPageReload (event) {
+function copyToClipboard(event) {
     event.preventDefault()
-}
-//Convert inputs into an object
-function inputToObject (event) {
+
+    const text = document.querySelector('#text')
+    const newText = document.querySelector('#newText')
+
     const formElement = event.target
     const formData = Object.fromEntries(new FormData(formElement))
-    return formData
-}
 
-//Replace elements with # in the base text
-function replaceTags (text, convertedObject) {
-    const replacedTags = text.textContent.replace(/#(\w+)/g, (match, key) => convertedObject[key] || match)
-    return replacedTags
-}
+    const editedText = text.textContent.replace(/#(\w+)/g, (match, key) => formData[key] || match)
 
-//Copy the edited text to clipboard
-function copyToClipboard (editedText) {
     navigator.clipboard.writeText(editedText)
-}
 
-// Show and hide the notification
-function showNotification () {
-    document.querySelector('.notification-toast').style.display = 'flex'
-    setTimeout(() => document.querySelector('.notification-toast').style.display = 'none', 2000)
-}
-
-//Update page text
-function updateText (editedText) {
     text.style.display = 'none'
     newText.textContent = editedText
     newText.style.display = 'flex'
-}
 
-//Reset all form fields
-function resetFormFields (event) {
     event.target.reset()
 }
 
-//Call other functions in the right order
-function callFunctions (event) {
-    cancelPageReload(event)
-    const convertedObject = inputToObject(event)
-    const editedText = replaceTags(text, convertedObject)
-    copyToClipboard (editedText)
-    showNotification ()
-    updateText (editedText)
-    resetFormFields (event)
+function showNotification () {
+    document.querySelector('.notificationBanner').style.display = 'flex'
+    setTimeout(() => document.querySelector('.notificationBanner').style.display = 'none', 2000)
 }
 
+window.initCopyText = onSubmit;
 
-window.initCopyText = initializeCopyFeature;
-
-initializeCopyFeature();
+onSubmit();
