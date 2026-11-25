@@ -5,28 +5,25 @@ function onSubmit() {
 }
 
 function copyToClipboard(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const text = document.querySelector('#text')
-    const newText = document.querySelector('#newText')
+    const text = document.querySelector('#text');
+    const newText = document.querySelector('#newText');
 
-    const formElement = event.target
-    const formData = Object.fromEntries(new FormData(formElement))
+    const formElement = event.target;
+    const formData = Object.fromEntries(new FormData(formElement));
 
-    const editedText = text.textContent.replace(/#(\w+)/g, (match, key) => formData[key] || match)
+    const editedText = text.textContent.replace(/#(\w+)/g, (match, key) => formData[key] || match);
 
-    navigator.clipboard.writeText(editedText)
+    navigator.clipboard.writeText(editedText);
 
-    text.style.display = 'none'
-    newText.textContent = editedText
-    newText.style.display = 'flex'
+    text.style.display = 'none';
+    newText.textContent = editedText;
+    newText.style.display = 'flex';
 
-    event.target.reset()
-}
+    showNotification();
 
-function showNotification () {
-    document.querySelector('.notificationBanner').style.display = 'flex'
-    setTimeout(() => document.querySelector('.notificationBanner').style.display = 'none', 2000)
+    event.target.reset();
 }
 
 window.initCopyText = onSubmit;
