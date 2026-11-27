@@ -1,6 +1,9 @@
 function showNotification() {
-    document.querySelector('.notification-toast').style.display = 'flex'
-    setTimeout(() => document.querySelector('.notification-toast').style.display = 'none', 2000)
+    const notificationToast = document.createElement('h3')
+    notificationToast.classList.add('notification-toast')
+    notificationToast.textContent = 'Texto copiado!'
+    document.body.appendChild(notificationToast)
+    setTimeout(() => notificationToast.remove(), 2000);
 }
 
 window.initNotificationToast = showNotification;

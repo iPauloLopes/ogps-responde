@@ -219,13 +219,8 @@ mark {
     bottom: 36px;
     left: 50%;
     background-color: var(--success-color);
-    padding: 0.75rem 1rem;
+    padding: 1rem 3rem;
     border-radius: 6px;
     box-shadow: var(--card-shadow);
-    display: none;
-}
-
-.notification-toast h3 {
-    padding: 8px 36px;
     color: var(--sidebar-text);
 }
